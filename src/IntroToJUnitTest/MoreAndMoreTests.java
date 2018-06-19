@@ -28,34 +28,30 @@ public class MoreAndMoreTests extends MoreAndMoreMethods{
 		assertFalse(isPrime(527));
 
 	}
-
-
-	//
-	// @Test
-	// public void SquareTest() {
-	//
-	// assertTrue(isSquare(4));
-	// assertTrue(isSquare(144));
-	// assertTrue(isSquare(64));
-	// assertTrue(isSquare(10201));
-	// assertTrue(isSquare(1));
-	// assertFalse(isSquare(3));
-	// assertFalse(isSquare(22));
-	// assertFalse(isSquare(143));
-	//
-	// }
-	//
-	// @Test
-	// public void CubeTest() {
-	//
-	// assertTrue(isCube(27));
-	// assertTrue(isCube(216));
-	// assertTrue(isCube(729));
-	// assertTrue(isCube(1));
-	// assertFalse(isCube(3));
-	// assertFalse(isCube(22));
-	// assertFalse(isCube(143));
-	//
-	// }
+	 @Test
+	 public void SquareTest() {
+	 assertTrue(isSquare(4));
+	 assertTrue(isSquare(144));
+	 assertTrue(isSquare(64));
+	 assertTrue(isSquare(10201));
+	 assertTrue(isSquare(1));
+	 assertFalse(isSquare(3));
+	 assertFalse(isSquare(22));
+	 assertFalse(isSquare(143));
+	
+	}
+	
+	 @Test
+	 public void CubeTest() {
+	
+	 assertTrue(isCube(27));
+	 assertTrue(isCube(216));
+	 assertTrue(isCube(729));
+	 assertTrue(isCube(1));
+	 assertFalse(isCube(3));
+	 assertFalse(isCube(22));
+	 assertFalse(isCube(143));
+	
+	}
 
 }
