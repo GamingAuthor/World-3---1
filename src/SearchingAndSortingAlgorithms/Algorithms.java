@@ -1,5 +1,6 @@
 package SearchingAndSortingAlgorithms;
 
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
@@ -53,16 +54,52 @@ public class Algorithms {
 		}
 	}
 
-	public static List<String> sortScores(List<Double> results) {
-		for (int i = 0; i < results.size(); i++) {
-			Double temp = 0.0;
-			if (results.get(i) > results.get(i-1)) {
-				temp = results.get(i - 1);
-				results.set(i, temp);
-				temp = results.get(i);
+	public static List<Double> sortScores(List<Double> results) {
+		Double temp = 0.0;
+		System.out.println(results);
+		for (int i = 0; i < results.size() - 1; i++) {
+			for (int n = i + 1; n < results.size(); n++) {
+				if (results.get(i) > results.get(n)) {
+					temp = results.get(i);
+					results.set(i, results.get(n));
+					results.set(n, temp);
+				}
 			}
 		}
+		return results;
+
 	}
 
-	// Add other methods here
+	public static List<String> sortDNA(List<String> unsortedSequences) {
+		String temp = "";
+		for (int i = 0; i < unsortedSequences.size() - 1; i++) {
+			for (int n = i + 1; n < unsortedSequences.size(); n++) {
+				if (unsortedSequences.get(i).length() > unsortedSequences.get(n).length()) {
+					temp = unsortedSequences.get(i);
+					unsortedSequences.set(i, unsortedSequences.get(n));
+					unsortedSequences.set(n, temp);
+				}
+			}
+		}
+		return unsortedSequences;
+	}
+
+	public static List<String> sortWords(List<String> words) {
+		String temp = "";
+		int order = 0;
+		for(int i = 0; i<words.size()-1;i++) {
+			for(int n = i + 1; n<words.size();n++) {
+				order = words.get(i).compareTo(words.get(n));
+				if(order>0) {
+					temp = words.get(i);
+					words.set(i, words.get(n));
+					words.set(n, temp);
+				}
+			}
+		}	
+		System.out.println(words);
+	return words;
+}
+
+// Add other methods here
 }
